@@ -14,10 +14,11 @@ public class Main {
 
     public static String deleteExcessChars(String line) {
         line = line.toLowerCase();
-        String[] symbols = new String[]{"!", "?", ",", ".", "(", ")", ":", ";", "%", "+", "-", "="};
+        String[] symbols = new String[]{"!", "?", ",", ".", "(", ")", ":", ";", "%", "+", "-", "=","«","»","0","1","2","3","4","5","6","7","8","9", "\""};
         for (String symbol : symbols) {
             line = line.replace(symbol, "");
         }
+        line = line.replaceAll("\\s+", " ");
         return line;
     }
 
